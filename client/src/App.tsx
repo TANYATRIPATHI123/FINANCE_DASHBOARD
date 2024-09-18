@@ -4,8 +4,9 @@ import { useMemo } from "react";
 import { themeSettings } from "./theme";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Navbar from "@/scenes/navbar"
+import {BrowserRouter, Routes, Route} from "react-router-dom" 
+import NavBar from "./scenes/navbar"
+import Dashboard from "./scenes/dashboard";
 
 function App() {
       const theme = useMemo(() => createTheme(themeSettings), [])
@@ -14,9 +15,9 @@ function App() {
         <ThemeProvider theme = {theme}>
           <CssBaseline />
           <Box width="100%" height="100%" padding = "1rem 2rem 4rem 2rem">
-            <Navbar />
+            <NavBar/>
             <Routes>
-              <Route path="/" element={<div>dashboard page</div>} />
+              <Route path="/" element={<Dashboard/>}/>
               <Route path="/predictions" element={<div>predicitions page</div>} />
             </Routes>
           </Box>

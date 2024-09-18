@@ -4,9 +4,9 @@ import PixIcon from '@mui/icons-material/Pix'
 import { Link } from 'react-router-dom'
 import FlexBetween from '../../components/FlexBetween'
 
-
+//eslint-disable-next-line
 type Props = {}
-
+//eslint-disable-next-line
 const Navbar = (props: Props) => {
   const { palette } = useTheme();
   const [selected, setSelected] = useState("dashboard");
@@ -29,7 +29,7 @@ const Navbar = (props: Props) => {
               textDecoration: "inherit"
             }}
           >
-            dashboard
+            Dashboard
           </Link>
         </Box>
         <Box>
@@ -41,7 +41,7 @@ const Navbar = (props: Props) => {
               textDecoration: "inherit"
             }}
           >
-            predictions
+            Predictions
           </Link>
         </Box>
       </FlexBetween>
